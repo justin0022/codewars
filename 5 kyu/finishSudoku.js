@@ -1,3 +1,9 @@
+/*
+Write a function done_or_not/DoneOrNot passing a board (list[list_lines]) as parameter. If the board is valid return 'Finished!', otherwise return 'Try again!'
+
+ongoing
+*/
+
 function doneOrNot(board) {
     const checkValidityOfBoard = (board) => {
         for (let i = 0; i < 9; i++) {
