@@ -51,17 +51,17 @@ Note
 Not all paths can be made simpler. The path ["NORTH", "WEST", "SOUTH", "EAST"] is not reducible. "NORTH" and "WEST", "WEST" and "SOUTH", "SOUTH" and "EAST" are not directly opposite of each other and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
 */
 
-function dirReduc(arr) {
-    let i = 0;
+function dirReduc (arr) {
+  let i = 0
 
-    while (i < arr.length) {
-        if ((arr[i] === "NORTH" && arr[i + 1] === "SOUTH") ||
-            (arr[i] === "SOUTH" && arr[i + 1] === "NORTH") ||
-            (arr[i] === "EAST" && arr[i + 1] === "WEST") ||
-            (arr[i] === "WEST" && arr[i + 1] === "EAST")) {
-            arr.splice(i, 2);
-            i--;
-        } else i++
-    }
-    return arr
+  while (i < arr.length) {
+    if ((arr[i] === 'NORTH' && arr[i + 1] === 'SOUTH') ||
+            (arr[i] === 'SOUTH' && arr[i + 1] === 'NORTH') ||
+            (arr[i] === 'EAST' && arr[i + 1] === 'WEST') ||
+            (arr[i] === 'WEST' && arr[i + 1] === 'EAST')) {
+      arr.splice(i, 2)
+      i--
+    } else i++
+  }
+  return arr
 }

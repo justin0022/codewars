@@ -12,10 +12,10 @@ Should return: 11
 Should return: 160
 */
 
-function findOutlier(integers){
-    var even = integers.filter(function(x) { return x % 2 === 0 })
-    var odd = integers.filter(function(x) { return x % 2 !== 0 })
-    
-    if (even.length === 1) return even[0]
-    if (odd.length === 1) return odd[0]
-  }
+function findOutlier (integers) {
+  var even = integers.filter(function (x) { return x % 2 === 0 })
+  var odd = integers.filter(function (x) { return x % 2 !== 0 })
+
+  if (even.length === 1) return even[0]
+  if (odd.length === 1) return odd[0]
+}

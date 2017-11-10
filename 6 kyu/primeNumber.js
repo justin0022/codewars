@@ -13,11 +13,10 @@ You can assume you will be given an integer input.
 You can not assume that the integer will be only positive. You may be given negative numbers as well (or 0).
 */
 
-function isPrime(num) {
-    if (num <= 1 ) return false
-    for (let i = 2; i<num; i++) {
-      if (num%i === 0) return false
-    }
-    return true
+function isPrime (num) {
+  if (num <= 1) return false
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false
   }
-
+  return true
+}
