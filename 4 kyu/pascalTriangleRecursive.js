@@ -8,7 +8,7 @@ const memoizeArr = []
 
 const pt = (level) => {
   if (level === 1) return [1]
-  let prevLevel;
+  let prevLevel
   if (memoizeArr[level - 1]) {
     prevLevel = memoizeArr[level - 1]
   } else {
