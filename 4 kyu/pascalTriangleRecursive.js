@@ -13,11 +13,12 @@ const pt = (level) => {
     prevLevel = memoizeArr[level - 1]
   } else {
     prevLevel = pt(level - 1)
+    memoizeArr[level - 1] = pt(level - 1)
   }
   const prevArr = prevLevel.slice(-(level - 1))
   const thisArr = [1]
-  for (let i = 0; i < prevArr.length - 1; i++) {
-    thisArr[i + 1] = prevArr[i] + prevArr[i + 1]
+  for (let i = 1; i < prevArr.length; i++) {
+    thisArr[i] = prevArr[i - 1] + prevArr[i]
   }
   thisArr.push(1)
   return [...prevLevel, ...thisArr]
@@ -27,4 +28,4 @@ const pt = (level) => {
 // console.log(pt(2))
 // console.log(pt(3))
 // console.log(pt(4))
-console.log(pt(300))
+console.log(pt(400))
